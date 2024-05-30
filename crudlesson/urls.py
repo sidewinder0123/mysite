@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('genders', views.index_gender),
     path('gender/create', views.create_gender),
-    path('gender/store', views.store_gender),
+    path('gender_store', views.store_gender),
     path('gender/show/<int:gender_id>', views.show_gender),
     path('gender/edit/<int:gender_id>', views.edit_gender),
     path('gender/update/<int:gender_id>', views.update_gender),
@@ -12,4 +12,5 @@ urlpatterns = [
     path('gender/destroy/<int:gender_id>', views.destroy_gender),
     path('users', views.index_user),
     path('users/create', views.create_user),
+    path('user/store', views.store_user)
 ]

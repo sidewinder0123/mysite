@@ -6,7 +6,7 @@ List of User
 
 {% block content %}
 
-<a href="#" class="btn btn-primary float-end mt-1 me-1">Add Gender</a>
+<a href="users/create" class="btn btn-primary float-end mt-1 me-1">Add User</a>
 {% include "include/messages.html" %}
 <div class="col-md-6 mx-auto">
     <div class="table-responsive">
@@ -22,7 +22,21 @@ List of User
                 </tr>
             </thead>
             <tbody>
-
+                {% for user in users  %}
+                    <tr>
+                        <td>{{ user.user_id}}</td>
+                        <td>{{ user.first_name}}</td>
+                        <td>{{ user.middle_name}}</td>
+                        <td>{{ user.last_name}}</td>
+                        <td>{{ user.gender }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary">View</a>
+                                <a href="#" class="btn btn-success">Edit</a>
+                                <a href="#" class="btn btn-danger">Delete</a>
+                            </div>
+                    </tr>  
+                 {% endfor %}
             </tbody>
         </table>
     </div>

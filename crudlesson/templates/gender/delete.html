@@ -12,7 +12,7 @@ Delete Gender
 <form action= "/gender/destroy/{{ gender.gender_id }}" method="post">
     {% csrf_token %}
     <button type="submit" class="btn  btn-danger float-end">Yes</button>
-    <a href='#' class="btn btn-secondary float-end">No</a>
+    <a href='/genders' class="btn btn-secondary float-end">No</a>
 </form>
 
 {% endblock content%}
