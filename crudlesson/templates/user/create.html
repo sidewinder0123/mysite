@@ -1,0 +1,58 @@
+{% extends "layout/base.html" %}
+
+{% block title %} 
+Create Gender 
+{% endblock title %} 
+
+{% block content  %}
+
+<div class="col-md-6 mx-auto">
+    <form action="#" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="gender">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="gender"/>
+        </div>
+        <div class="mb-3">
+            <label for="gender">Middle Name</label>
+            <input type="text" class="form-control" id="first_name" name="gender"/>
+        </div>
+        <div class="mb-3">
+            <label for="gender">Last Name</label>
+            <input type="text" class="form-control" id="first_name" name="gender"/>
+        </div>
+        <div class="mb-3">
+            <label for="gender">Age</label>
+            <input type="text" class="form-control" id="first_name" name="gender"/>
+        </div>
+        <div class="mb-3">
+            <label for="gender">Birth Date</label>
+            <input type="text" class="form-control" id="first_name" name="gender"/>
+        </div>
+        <div class="mb-3">
+            <label for="gender_id">Gender</label>
+            <select name="gender_id" id="gender_id" class="form-select">
+                <option value="">N/A</option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="gender">Username</label>
+            <input type="text" class="form-control" id="first_name" name="first_name"/>
+        </div>
+        <div class="mb-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password"/>
+        </div>
+        <div class="mb-3">
+            <label for="confirm_password">confirm password</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password"/>
+        </div>
+        <button type="submit" class="btn btn-success float-end col-12 col-md-3">Save Gender</button>
+        <a href="/genders" class="btn btn-secondary float-end col-12 col-md-3 me-1">Back</a>  
+    </form>
+</div> 
+
+
+{% endblock content  %}
+
